@@ -1,0 +1,756 @@
+commit 4c06332a4d758c65309d5192402ead233eb39264
+Author: Reinaldo Deprera <rdeprera@gmail.com>
+Date:   Sat Jan 29 00:26:11 2022 -0300
+
+    Primeiro commit
+
+diff --git a/D64data.wad b/D64data.wad
+new file mode 100644
+index 0000000..fce5ff9
+Binary files /dev/null and b/D64data.wad differ
+diff --git a/DETAIL.WAD b/DETAIL.WAD
+new file mode 100644
+index 0000000..d2af17f
+Binary files /dev/null and b/DETAIL.WAD differ
+diff --git a/Fonts/fixed.dfn b/Fonts/fixed.dfn
+new file mode 100644
+index 0000000..78554f4
+Binary files /dev/null and b/Fonts/fixed.dfn differ
+diff --git a/Fonts/fixed12.dfn b/Fonts/fixed12.dfn
+new file mode 100644
+index 0000000..1a9800f
+Binary files /dev/null and b/Fonts/fixed12.dfn differ
+diff --git a/Fonts/large.dfn b/Fonts/large.dfn
+new file mode 100644
+index 0000000..6403fbf
+Binary files /dev/null and b/Fonts/large.dfn differ
+diff --git a/Fonts/readme.txt b/Fonts/readme.txt
+new file mode 100644
+index 0000000..77f47cc
+--- /dev/null
++++ b/Fonts/readme.txt
+@@ -0,0 +1,17 @@
++These fonts are the equivalent of the following standard 
++Windows fonts:
++
++fixed.dfn       Fixedsys
++fixed12.dfn     Fixedsys (12pt)
++system.dfn      System
++system12.dfn    System (12pt)
++large.dfn       MS Sans Serif (18pt)
++small7.dfn      Small Fonts (7pt)
++small8.dfn      Small Fonts (8pt)
++small10.dfn     Small Fonts (10pt)
++
++The -gdifonts option forces Doomsday to use the original
++GDI fonts instead. The -fontdir option can be used to 
++specify a different DFN directory (default is "fonts\").
++
++
+diff --git a/Fonts/small10.dfn b/Fonts/small10.dfn
+new file mode 100644
+index 0000000..2f9e8a8
+Binary files /dev/null and b/Fonts/small10.dfn differ
+diff --git a/Fonts/small7.dfn b/Fonts/small7.dfn
+new file mode 100644
+index 0000000..697271a
+Binary files /dev/null and b/Fonts/small7.dfn differ
+diff --git a/Fonts/small8.dfn b/Fonts/small8.dfn
+new file mode 100644
+index 0000000..4fbb563
+Binary files /dev/null and b/Fonts/small8.dfn differ
+diff --git a/Fonts/system.dfn b/Fonts/system.dfn
+new file mode 100644
+index 0000000..8ec84d1
+Binary files /dev/null and b/Fonts/system.dfn differ
+diff --git a/Fonts/system12.dfn b/Fonts/system12.dfn
+new file mode 100644
+index 0000000..d854938
+Binary files /dev/null and b/Fonts/system12.dfn differ
+diff --git a/Graphics/Background.pcx b/Graphics/Background.pcx
+new file mode 100644
+index 0000000..e657ff4
+Binary files /dev/null and b/Graphics/Background.pcx differ
+diff --git a/Graphics/BoxCorner.png b/Graphics/BoxCorner.png
+new file mode 100644
+index 0000000..611bd5f
+Binary files /dev/null and b/Graphics/BoxCorner.png differ
+diff --git a/Graphics/BoxFill.png b/Graphics/BoxFill.png
+new file mode 100644
+index 0000000..29b2524
+Binary files /dev/null and b/Graphics/BoxFill.png differ
+diff --git a/Graphics/BoxShade.png b/Graphics/BoxShade.png
+new file mode 100644
+index 0000000..d6c2ac8
+Binary files /dev/null and b/Graphics/BoxShade.png differ
+diff --git a/Graphics/Hint.png b/Graphics/Hint.png
+new file mode 100644
+index 0000000..1e84bdf
+Binary files /dev/null and b/Graphics/Hint.png differ
+diff --git a/Graphics/Logo.png b/Graphics/Logo.png
+new file mode 100644
+index 0000000..b389594
+Binary files /dev/null and b/Graphics/Logo.png differ
+diff --git a/Graphics/Mouse.png b/Graphics/Mouse.png
+new file mode 100644
+index 0000000..7d969a8
+Binary files /dev/null and b/Graphics/Mouse.png differ
+diff --git a/Graphics/WallGlow.pcx b/Graphics/WallGlow.pcx
+new file mode 100644
+index 0000000..7f4fca6
+Binary files /dev/null and b/Graphics/WallGlow.pcx differ
+diff --git a/KeyMaps/default.dkm b/KeyMaps/default.dkm
+new file mode 100644
+index 0000000..1766518
+--- /dev/null
++++ b/KeyMaps/default.dkm
+@@ -0,0 +1,330 @@
++000	000
++001	027
++002	1
++003	2
++004	3
++005	4
++006	5
++007	6
++008	7
++009	8
++010	9
++011	0
++012	-
++013	=
++014	127
++015	009
++016	q
++017	w
++018	e
++019	r
++020	t
++021	y
++022	u
++023	i
++024	o
++025	p
++026	[
++027	]
++028	013
++029	159
++030	a
++031	s
++032	d
++033	f
++034	g
++035	h
++036	j
++037	k
++038	l
++039	;
++040	'
++041	`
++042	158
++043	\
++044	z
++045	x
++046	c
++047	v
++048	b
++049	n
++050	m
++051	,
++052	.
++053	/
++054	158
++055	*
++056	160
++057	032
++058	000
++059	132
++060	133
++061	134
++062	135
++063	136
++064	137
++065	138
++066	139
++067	140
++068	141
++069	144
++070	145
++071	146
++072	147
++073	148
++074	-
++075	149
++076	150
++077	151
++078	+
++079	152
++080	153
++081	154
++082	155
++083	156
++084	000
++085	000
++086	000
++087	142
++088	143
++089	000
++090	000
++091	000
++092	\
++093	000
++094	000
++095	000
++096	000
++097	000
++098	000
++099	000
++100	000
++101	000
++102	000
++103	000
++104	000
++105	000
++106	000
++107	000
++108	000
++109	000
++110	000
++111	000
++112	000
++113	000
++114	000
++115	000
++116	000
++117	000
++118	000
++119	000
++120	000
++121	000
++122	000
++123	000
++124	000
++125	000
++126	000
++127	000
++128	000
++129	000
++130	000
++131	000
++132	000
++133	000
++134	000
++135	000
++136	000
++137	000
++138	000
++139	000
++140	000
++141	000
++142	000
++143	000
++144	000
++145	000
++146	000
++147	000
++148	000
++149	000
++150	000
++151	000
++152	000
++153	000
++154	000
++155	000
++156	013
++157	159
++158	000
++159	000
++160	000
++161	000
++162	000
++163	000
++164	000
++165	000
++166	000
++167	000
++168	000
++169	000
++170	000
++171	000
++172	000
++173	000
++174	000
++175	000
++176	000
++177	000
++178	000
++179	000
++180	000
++181	/
++182	000
++183	000
++184	160
++185	000
++186	000
++187	000
++188	000
++189	000
++190	000
++191	000
++192	000
++193	000
++194	000
++195	000
++196	000
++197	157
++198	000
++199	165
++200	130
++201	163
++202	000
++203	129
++204	000
++205	128
++206	000
++207	166
++208	131
++209	164
++210	161
++211	162
++212	000
++213	000
++214	000
++215	000
++216	000
++217	000
++218	000
++219	000
++220	000
++221	000
++222	000
++223	000
++224	000
++225	000
++226	000
++227	000
++228	000
++229	000
++230	000
++231	000
++232	000
++233	000
++234	000
++235	000
++236	000
++237	000
++238	000
++239	000
++240	000
++241	000
++242	000
++243	000
++244	000
++245	000
++246	000
++247	000
++248	000
++249	000
++250	000
++251	000
++252	000
++253	000
++254	000
++255	000
++
+++Shift
++'	"
++,	<
++-	_
++.	>
++/	?
++0	)
++1	!
++2	@
++3	#
++4	$
++5	%
++6	^
++7	&
++8	*
++9	(
++;	:
++=	+
++A	a
++B	b
++C	c
++D	d
++E	e
++F	f
++G	g
++H	h
++I	i
++J	j
++K	k
++L	l
++M	m
++N	n
++O	o
++P	p
++Q	q
++R	r
++S	s
++T	t
++U	u
++V	v
++W	w
++X	x
++Y	y
++Z	z
++[	{
++\	|
++]	}
++a	A
++b	B
++c	C
++d	D
++e	E
++f	F
++g	G
++h	H
++i	I
++j	J
++k	K
++l	L
++m	M
++n	N
++o	O
++p	P
++q	Q
++r	R
++s	S
++t	T
++u	U
++v	V
++w	W
++x	X
++y	Y
++z	Z
+diff --git a/KeyMaps/fi.dkm b/KeyMaps/fi.dkm
+new file mode 100644
+index 0000000..801e69f
+--- /dev/null
++++ b/KeyMaps/fi.dkm
+@@ -0,0 +1,50 @@
++012	+
++013	´
++026	å
++027	^
++039	ö
++040	ä
++043	'
++053	-
++086	<
++092	\
++
+++Shift
++´	`
++'	*
++^	~
++,	;
++.	:
++-	_
++<	>
++0	=
++1	!
++2	"
++3	#
++4	¤
++5	%
++6	&
++7	/
++8	(
++9	)
++;	:
+++	?
++Å	å
++Ä	ä
++Ö	ö
++å	Å
++ä	Ä
++ö	Ö
++-Shift
++
+++Alt
+++	\
++7	{
++0	}
++8	[
++9	]
++<	|
++2	@
++3	£
++4	$
++^	~
+diff --git a/README.md b/README.md
+new file mode 100644
+index 0000000..db3bba9
+--- /dev/null
++++ b/README.md
+@@ -0,0 +1,5 @@
++# d00mG4
++
++Game data from "D00mG4" for PC, a very popular shooter game from 90's.
++
++> :warning: **THIS FILES DOESN'T WORK WITHOUT A GAME ENGINE**: Search for the game engine of this "d00m" on GitHub to load these files. This repository alone will not serve to play
+\ No newline at end of file
+diff --git a/cphelp.txt b/cphelp.txt
+new file mode 100644
+index 0000000..3ade893
+--- /dev/null
++++ b/cphelp.txt
+@@ -0,0 +1,221 @@
++# Doomsday Control Panel Help.
++#
++# [ID]
++# Key = ...
++# Key = ...
++#
++# Values can be split on multiple lines like this:
++# Key = begins... \
++#  ...and continues \
++#  like so.
++
++#
++# VIDEO 
++#
++[Gamma]
++cvar = vid-gamma
++def = 1.0
++desc = Smaller values result in a darker picture. In order for this setting to work your display adapter must support color adjustments. You should lower the gamma correction value until dark areas in maps become sufficiently dark. Note that with some monitors different resolutions require different gamma correction levels.\bUse the -noramp option to disable all color adjustments.
++
++[Display contrast]
++cvar = vid-contrast
++def = 1.0
++desc = Modifies the steepness of the gamma ramp. Values greater than 1.0 result in a more colorful picture but since the colors are clamped, some are lost in both the bright and dark ends of the ramp. Values less than 1.0 fade the picture towards gray. In order for this setting to work your display adapter must support color adjustments.\bUse the -noramp option to disable all color adjustments.
++
++[Display bright]
++cvar = vid-bright
++def = 0.0
++desc = Applies an offset to the gamma ramp. Positive values make the picture lighter, negative ones darker. For the best results, use a small positive brightness value with dark gamma and slightly increased contrast. In order for this setting to work your display adapter must support color adjustments.\bUse the -noramp option to disable all color adjustments.
++
++#
++# AUDIO
++#
++[Preferred music]
++cvar = music-source
++def = External files
++desc = There can be a WAD lump, external file and a CD track associated with each song. This setting controls which of these resources is actually played when the song is started. If the selected resource is not available, one that is will be chosen instead.
++
++[16-bit]
++cvar = sound-16bit
++def = No
++desc = When this setting is activated, 8-bit sounds are converted to 16-bit before playing. In order for this to be effective you must also choose a sample rate higher than 11025 Hz.
++
++[Sound effects sample]
++cvar = sound-rate
++def = 11025 Hz
++desc = The minimum sample rate for all sound effects. Samples with a smaller rate will be resampled to this rate before playing. To increase the quality of the resampling, activate the 16-bit sound effects option.
++
++[Show status]
++cvar = sound-info
++def = No
++desc = The status of all sound channels is drawn on screen. This is intended for debugging. The displayed information consists of sample cache size, channel flags, volume, frequency, latest start time, cursor positions, buffer flags and sample information.\bO = Origin, A = Attenuated, E = Emitter, 3 = 3D, P = Playing, R = Repeat, L = Reload.
++
++#
++# INPUT
++#
++[Joystick sensi]
++cvar = input-joy-sensi
++def = 5
++desc = With the sensitivity value of zero the whole axis range is in use. When the sensitivity is increased, the axis values are scaled so that their limits are closer to the center position. Use small values like zero or one for the best control with joysticks. With pad controllers this setting may have little effect, but it's best to keep the sensitivity at the default value of five.
++
++#
++# GRAPHICS 
++#
++[Smooth cam]
++cvar = rend-camera-smooth
++def = No
++desc = Camera movement is interpolated between the ticks of the 35 Hz game clock. Note that this only affects the camera, so other game objects and structures still move only 35 times per second. They may seem to stutter a bit as they move, even though they move the same way as with camera smoothing turned off. Also, player controls may seem somewhat lagged: because of the interpolation, the movement of the camera is delayed 1/35 seconds.
++
++[Field Of View]
++cvar = rend-camera-fov
++def = 90
++desc = Adjust the camera's Field Of View angle according to your monitor configuration. If you have a large monitor and view it close by, using a larger FOV angle (around 100 degrees) will result in a more natural game view. With small monitors it's best to stick to 90 degrees or else the fish eye effect may become distracting.
++
++[Sky sphere]
++cvar = rend-sky-distance
++def = 1600
++desc = The sky is composed of two capped hemispheres rendered around the camera location. The sky sphere radius is the radius of these hemispheres. The primary purpose of this setting is to determine how large an impact fog has on the sky. Larger radii will result in a sky with heavier fog.
++
++[Always render full sky]
++cvar = rend-sky-full
++def = No
++desc = Always render both the upper and lower sky hemispheres, even if one of them might be fully occluded by world geometry. If your video card has sufficient fill rate, keeping this set to Yes is a good idea. In some maps there may be a hall-of-mirrors effect visible in the sky when this is set to No.
++
++[Shadow visible]
++cvar = rend-shadow-far
++def = 1000
++desc = Maximum distance at which shadows under objects are visible. If the object is farther than this, no shadow will be drawn. Since the shadows are extremely simple, posing little fear of performance loss, it's safe to increase this value as needed.
++
++[Print tri]
++cvar = rend-info-tris
++desc = Print scene and model triangle counts in the console after rendering each frame.\bThe first figure is the number of triangles rendered during the entire frame, and the second figure (in parentheses) is the number of triangles in the rendered 3D models.
++
++#
++# GRAPHICS: LIGHTS
++#
++[Blending mode]
++cvar = rend-light-blend
++def = Multiply
++desc = The method used to draw dynamic lights. In the Multiply mode, color from dynamic lights is multiplied with the underlying surface pixels. This allows dark areas to be correctly lit up by the lights. The Add mode is faster but doesn't look as realistic.\bThe third mode, Process wo/rendering, is for debugging. In it, all dynamic light polygons are calculated but none are rendered.
++
++[Dynamic light radius factor]
++cvar = rend-light-radius-scale
++def = 3
++desc = The radius of all dynamic lights is multiplied by this factor. Lights are never larger than the Maximum dynamic light radius, though.
++
++[Maximum dynamic light rad]
++cvar = rend-light-radius-max
++def = 256
++desc = The maximum radius a dynamic light can have. This is just a limit: to make the lights larger, you also need to increase the Dynamic light radius factor.
++
++[Floor/ceiling glow on w]
++cvar = rend-glow-wall
++def = Yes
++desc = Glowing floor and ceiling textures will cast a dynamic light on surrounding walls.
++
++#
++# GRAPHICS: HALOS
++#
++[Number of flares]
++cvar = rend-halo
++def = 5
++desc = Maximum number of lens flares originating from a luminous object. To disable lens flares, set this to None (zero).
++
++[Occlusion fade]
++cvar = rend-halo-occlusion
++def = 48
++desc = The rate at which a halo changes state from "visible" to "occluded" and vice versa. A small fade speed results in halos that appear and disappear softly, but are visible through walls for a short while before disappearing.
++
++[Flare visibility lim]
++cvar = rend-halo-secondary-limit
++def = 1
++desc = Controls when secondary lens flares become visible. They are only visible when the light source is close enough to the camera. The larger the number, the farther away secondary flares are visible.
++
++[Z magn]
++cvar = rend-halo-zmag-div
++def = 100
++desc = The higher the number, the smaller lens flares become when the source is far away. Normally halos grow slightly larger as they move away from the camera.
++
++#
++# GRAPHICS: TEXTURES
++#
++[Texture quality]
++cvar = rend-tex-quality
++def = 8
++desc = All textures must be resized so that their dimensions are powers of two. Depending on this setting either the higher or smaller matching power of two is chosen. At quality zero, all textures are reduced in size, to match the largest power of two smaller than the original size. At quality 8, the resizing is always done upwards.\bYou should reset textures if you change this setting.
++
++#
++# GRAPHICS: OBJECTS
++#
++[3D model vis]
++cvar = rend-model-distance
++def = 1500
++desc = Objects farther than this will never be rendered as 3D models.
++
++[Align sprites]
++cvar = rend-sprite-align
++def = Camera
++desc = This setting controls which direction sprites face. Aligning to camera means the sprites are always upright (to make them appear more 3D) but they will turn to face the camera coordinates. Aligning to view plane resembles the way the sprites were drawn in software. The "limited" options restrict how much the sprite can tilt vertically.
++
++[LOD level zero]
++cvar = rend-model-lod
++def = 256
++desc = The distance where LOD level zero becomes LOD level one. Only affects 3D models that have Level Of Detail information (DMDs).
++
++#
++# GRAPHICS: PARTICLES
++#
++[Near diffusion]
++cvar = rend-particle-diffuse
++def = 4
++desc = Particles may cause excessive overdraw if many are visible just in front of the camera. This setting makes large particles near the camera more transparent and ultimately invisible. The larger the diffuse factor, the smaller particles will be affected. The end result is that particles will not be visible near the camera. Increase the setting if framerate drops alarmingly when in smoke.
++
++[Near clip dist]
++cvar = rend-particle-visible-near
++def = Disabled
++desc = Particles that are closer to the camera than this are not drawn at all.
++
++#
++# NETWORK
++#
++[Cl-to-sv pos transmit]
++cvar = client-pos-interval
++def = 10
++desc = The client periodically sends its coordinates to the server in order to keep it synchronized with the player position the client perceives as correct. The interval between the coordinate transmissions as a number of 35 Hz tics. Use a larger interval with low-bandwidth connections (can lead to more warping, though).
++
++[Server login pass]
++cvar = server-password
++desc = If a client wishes to make a remote console connection to the server it must specify this password. If the password is empty, clients can issue console commands on the server without specifying a password. Clients use the "login" and "logout" commands to begin and end a remote connection.
++
++[Frame interval]
++cvar = server-frame-interval
++def = 1
++desc = Number of 35 Hz ticks between frames sent to clients. Only for the server. Small intervals require more bandwidth but result in smoother animation and other world events. Use larger intervals (2..5) with low-bandwidth connections.
++
++#
++# CONSOLE
++#
++[Silent console]
++cvar = con-var-silent
++def = No
++desc = Normally when the value of a console variable is changed, its name and the new value get printed in the console. If the variables are silent, this will not happen and the value can be changed without anything being printed as a confirmation.
++
++[Command compl]
++cvar = con-completion
++def = List with values
++desc = The Tab key is used to complete words in the console. The console knows how to complete command, variable and alias names. The completion can work in two ways. In the "List with values" mode, pressing Tab will complete the unambiguous part of the word and print a list of possible completions. Variables will be printed with their values. In the "Cycle" mode, Tab is used to cycle through all the choices.
++
++#
++# NETWORK SETUP
++#
++[TCP/IP]
++desc = The TCP/IP protocol can be used for internet games as well as Local Area Network games.\bThe TCP/IP port setting specifies the port that this computer will be using for all Doomsday-related communications. If you're behind a firewall, you can use the port setting to make sure that only this one port is used. You will still need to open the port in the firewall. Otherwise, if port zero is used, the actual port will be selected automatically, and may be blocked by a firewall.\bIn order to connect, a client must know the address of the server. If the server is on the local network, the Search Address box on the Client Setup screen can be left empty. Otherwise, the client must type in a valid URL or IP address: e.g. "example.doom.com" or "127.0.0.1".
++
++[IPX]
++desc = The IPX (Internetwork Packet Exchange) protocol requires no configuration. It can only be used on Local Area Networks. If you want to play over the internet, you must use the TCP/IP protocol.
++
++[Modem]
++desc = If you have several modem devices, select the one to use here.\bWhen hosting a game, the modem protocol does not need any further configuration. In order to connect, a client must type in the phone number of the server on the Client Setup screen.\bThe modem protocol is limited to 2-player games.
++
++[Serial Link]
++desc = Make sure both computers are using the same settings.
+diff --git a/doom64/Auto/D64_data.pk3 b/doom64/Auto/D64_data.pk3
+new file mode 100644
+index 0000000..baad37b
+Binary files /dev/null and b/doom64/Auto/D64_data.pk3 differ
+diff --git a/doom64/Auto/D64_data2.pk3 b/doom64/Auto/D64_data2.pk3
+new file mode 100644
+index 0000000..4f26eb5
+Binary files /dev/null and b/doom64/Auto/D64_data2.pk3 differ
+diff --git a/doom64/Auto/d64mus.wad b/doom64/Auto/d64mus.wad
+new file mode 100644
+index 0000000..e992d6f
+Binary files /dev/null and b/doom64/Auto/d64mus.wad differ
+diff --git a/doom64/Auto/doom2.wad b/doom64/Auto/doom2.wad
+new file mode 100644
+index 0000000..a73d027
+Binary files /dev/null and b/doom64/Auto/doom2.wad differ
+diff --git a/doom64/doom64_abstin.gwa b/doom64/doom64_abstin.gwa
+new file mode 100644
+index 0000000..ce9bac0
+Binary files /dev/null and b/doom64/doom64_abstin.gwa differ
+diff --git a/doom64/doom64_abstin.wad b/doom64/doom64_abstin.wad
+new file mode 100644
+index 0000000..120ba79
+Binary files /dev/null and b/doom64/doom64_abstin.wad differ
