@@ -1,4 +1,4 @@
-# d00mG4
+# d00mG4 data
 
 **Game data** from "D00mG4" for PC, a very popular shooter game from 90's.
 
